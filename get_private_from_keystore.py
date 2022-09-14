@@ -48,7 +48,7 @@ plain_key = dec_suite.decrypt(bytes.fromhex(keystore['crypto']['ciphertext']))
 
 print(plain_key)
 
-secret = "".join(['%02x' % b for b in plain_key])
+secret = plain_key.hex()
 print(secret)
 
 # refer https://ethereum.stackexchange.com/questions/3720/how-do-i-get-the-raw-private-key-from-my-mist-keystore-file?noredirect=1&lq=1
